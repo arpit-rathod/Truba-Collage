@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+
+    <script src="frontend.js" type="module"></script>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="buses.html">Buses</a>
+      <a href="canteen.html">Canteen</a>
+      <a href="Location.html">Location</a>
+  </nav>
+    <div class="navigation-container">
+      <div class="img-div">
+        <!-- <img src="./truba logo.jpeg" alt="" id="logo" /> -->
+      </div>
+    
+      <div class="menu-div">
+        <div class="section">
+          <button class="btns" id="newClassBtn">New Class</button>
+          <button class="btns" id="findBtn">Find</button>
+        </div>
+        <script></script>
+      </div>
+    </div>
+    <div class="header-container">
+      <h1 class="a">Attendance System</h1>
+      <div id="newClassSection" class="input-container">
+        <div class="div-input-1">
+          
+          <div class="inputDivs">
+            <select id="inputSem">
+              <option value="" disabled selected>
+                Select your Semester for Attendance
+              </option>
+              <option value="1">First Semester</option>
+              <option value="2">Second Semester</option>
+              <option value="3">Third Semester</option>
+              <option value="4">Fourth Semester</option>
+              <option value="5">Fifth Semester</option>
+              <option value="6">Six Semester</option>
+              <option value="7">Seven Semester</option>
+              <option value="8">Eight Semester</option>
+            </select>
+            <select  id="inputBranch" class="selectoption">
+              <option value="" disabled selected>Select your Branch</option>
+              <option value="1">CSE A</option>
+              <option value="2">CSE B</option>
+              <option value="3">IT</option>
+              <option value="4">AI & DS</option>
+              <option value="5">EC</option>
+              <option value="6">ME</option>
+              <option value="7">CE</option>
+            </select>
+          </div>
+          
+          <div class="inputDivs">
+            <select class="select-option" id="inputSubName">
+              <option value="" disabled selected>Select a subject</option>
+            </select>
+            <input class="inputs-fiels" id="lactureNo" value="1" style="width: 80px" type="number" />
+          </div>
+          <div class="inputDivs">
+            <input class="inputs-fiels" id="inputFacultyName" placeholder="Faculty Name : " type="text" />
+            <button id="getStart">Get Start</button>
+            <button id="discardBtn" disabled type="reset">Discard</button>
+          </div>
+        </div>
+
+        <div class="classStatusDivTag">
+          <p id="classStatusPTag"></p>
+        </div>
+        <div class="div-input-2">
+          <input
+          class="inputs-fiels"
+            id="rollNumberInput"
+            type="number"
+            placeholder="Please enter roll no."
+          />
+          <div class="btnsDiv">
+            <button  id="btnToAdd" disabled>Add Student</button>
+            <button   id="submitBtn" disabled type="submit">Submit</button>
+          </div>
+        </div>
+      </div>
+      <div id="name-container" class="name-container"></div>
+      <div>
+
+      <div id="findDiv" class="findDiv">
+        <!-- <div> -->
+        <input class="inputs-fiels" id="classCode" type="number" />
+        <button id="searchBtn" type="submit">Find</button>
+        <button id="hideStudent" type="submit">Clean</button>
+      </div>
+        <div id="showRecord" class="showRecord">
+          <div id="divForlectureDeatails"></div>
+          <div id="divForlectureAttendance"></div>
+        </div>
+      </div>
+      <!-- </div> -->
+    </div>
+    <!-- pop module -->
+    <div
+      id="popmodule"
+      style="
+        display: none;
+        justify-content: center;
+        position: absolute;
+        top: 210px;
+        left: 30%;
+      "
+    >
+      <div class="popup-container">
+        <p id="popupMSG">
+          Lorem, ipsum dolor sit amet consectetur adipisicing elit. Numquam,
+          dignissimos.
+        </p>
+        <div style="display: flex; justify-content: center">
+          <button id="okBtnPopup">Yes</button
+          ><button id="cancleBtnPopup">No</button>
+        </div>
+      </div>
+    </div>
+    <footer>
+        
+        <div class="footer-text">
+            <p>Visit us at: 895P+8MR, Karond Bypass Rd, Gandhi Nagar, Bhopal, Madhya Pradesh 462038, India</p>
+            <!-- <p>&copy; 2024 Your Company Name. All Rights Reserved.</p> -->
+        </div>
+    </footer>
+
+    <script>
+document.querySelectorAll('.btns, #submitBtn, #searchBtn, #hideStudent, #discardBtn').forEach(button => {
+  button.addEventListener('click', () => {
+    
+    button.classList.add('cyberpunk-active');
+
+   
+    setTimeout(() => {
+      button.classList.remove('cyberpunk-active');
+    }, 1500);
+  });
+});
+
+
+
+    </script>
+  </body>
+</html>

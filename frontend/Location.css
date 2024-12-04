@@ -1,0 +1,30 @@
+body {
+    padding: 0;
+    margin: 0;
+    background: radial-gradient(circle at top, #1a1a2e 20%, #16213e 40%, #0f3460 80%, #1b1b1b 100%);
+    color: #e0e0e0;
+    font-family: 'Orbitron', 'Segoe UI', sans-serif; /* Maintains the futuristic font */
+    text-shadow: 0 0 10px rgba(0, 255, 255, 0.5);
+    background-attachment: fixed; /* Keeps background static during scrolling */
+}
+.map-container iframe {
+    
+    /*max-width: 90%; */
+    height: 500px;
+    width: 80%;
+    border: 0;
+    border-radius: 10px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.5);
+}
+
+.footer-text {
+    font-size: 16px;
+    margin-top: 10px;
+}
+
+footer {
+    background-color: #16213e;
+    color: #e0e0e0;
+    padding: 20px 0;
+    text-align: center;
+}
